@@ -14,7 +14,6 @@ Examples
     "What is Madonna's real name?"
     "What's 18 times 4?"
     "How many inches in a meter?"
-    "Send me the source on that"
 
 # How to install a skill
 
