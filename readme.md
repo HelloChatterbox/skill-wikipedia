@@ -3,7 +3,7 @@
 
 Find out who is currently in orbit
 
-Using chatterbox web_apis extensions you can query http://open-notify.org/Open-Notify-API/
+Using chatterbox web_apis extensions you can query the [people in space API](http://open-notify.org/Open-Notify-API/People-In-Space/)
 
 Examples
 
