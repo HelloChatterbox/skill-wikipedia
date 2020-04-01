@@ -1,0 +1,83 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <variables>
+    <variable type="" id="kQQSIWc`$ii{eU~oIT.G">answered</variable>
+    <variable type="" id="VTdVIcQ!_Y:d,.k`MW%w">answer</variable>
+    <variable type="" id="|TzoVe{KIz^.jLlz_G{c">utterance</variable>
+  </variables>
+  <block type="fallback_handler" id="wNng(L6w7{#ahh6Y%KZf" x="35" y="176">
+    <statement name="skillCode">
+      <block type="variables_set" id="wlT2D?DuTw(AdL7NS2^$">
+        <field name="VAR" id="kQQSIWc`$ii{eU~oIT.G" variabletype="">answered</field>
+        <value name="VALUE">
+          <block type="logic_boolean" id="xKG88LY`jvL/kOt|/`}D">
+            <field name="BOOL">FALSE</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="7g2*5S`tS!k)WbJ!mIci">
+            <field name="VAR" id="VTdVIcQ!_Y:d,.k`MW%w" variabletype="">answer</field>
+            <value name="VALUE">
+              <block type="spoken_wolfram" id="TuHQZKd;|$$*j(JW*fu(">
+                <value name="NAME">
+                  <shadow type="text" id="`TC1csJqzaP-.`;Ozj*=">
+                    <field name="TEXT"></field>
+                  </shadow>
+                  <block type="variables_get" id="2u(q|wG|eq0*?IEnX_1}">
+                    <field name="VAR" id="|TzoVe{KIz^.jLlz_G{c" variabletype="">utterance</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if_try" id="d=`WiNtaX_hGaQhV%rB,">
+                <value name="IF0">
+                  <block type="variables_get" id="X`H-^zUle2^#q+KY}o){">
+                    <field name="VAR" id="VTdVIcQ!_Y:d,.k`MW%w" variabletype="">answer</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="speak" id="WDUBw85!Mq(9Qyj/WQs[">
+                    <value name="MESSAGE">
+                      <shadow type="text" id="A9}zJ_~G5L8Zn[[L?7_y">
+                        <field name="TEXT"></field>
+                      </shadow>
+                      <block type="variables_get" id="@KGZ7l[d^HwQIX*UNF:y">
+                        <field name="VAR" id="VTdVIcQ!_Y:d,.k`MW%w" variabletype="">answer</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="OKX]K3.9A%gyaE;3fOd{">
+                        <field name="VAR" id="kQQSIWc`$ii{eU~oIT.G" variabletype="">answered</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id=";i-_[.Ti8n/iyw7/;PIR">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="priority">
+      <shadow type="math_number" id="J?P2u@ARYI?UoXn0tHsS">
+        <field name="NUM">0</field>
+      </shadow>
+      <block type="math_number" id="J?P2u@ARYI?UoXn0tHsS">
+        <field name="NUM">70</field>
+      </block>
+    </value>
+    <value name="return">
+      <shadow type="logic_boolean" id="c9,IgZhc?CRSn`}rl(38">
+        <field name="BOOL">TRUE</field>
+      </shadow>
+      <block type="variables_get" id="KZgXlW0ypBt9~`B@Yzli">
+        <field name="VAR" id="kQQSIWc`$ii{eU~oIT.G" variabletype="">answered</field>
+      </block>
+    </value>
+  </block>
+</xml>
