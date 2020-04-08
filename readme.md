@@ -1,14 +1,12 @@
 
-# Astronauts - Chatterbox Skill
+# Time - Chatterbox Skill
 
-Find out who is currently in orbit
-
-Using chatterbox web_apis extensions you can query the [people in space API](http://open-notify.org/Open-Notify-API/People-In-Space/)
+What time is it?
 
 Examples
 
-    "Who is in space?"
-    "How many people in orbit?"
+    "What time is it"
+    "Tell me the time in France"
 
-![](astronauts.png)
+![](time.png)
 
