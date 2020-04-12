@@ -1,12 +1,16 @@
 
-# Time - Chatterbox Skill
+# Duck Duck Go - Chatterbox Skill
 
-What time is it?
+DuckDuckGo is a privacy-focused internet search engine. 
+
+Extended version of the skill for day 11 of our 30-day skill challenge,
+teaching Chatterbox how to search Duck Duck Go for extended answers regarding topics. 
+Learn about the Spanish Inquisition or learn about the American Revolution.
 
 Examples
 
-    "What time is it"
-    "Tell me the time in France"
+    "Search duck duck go for American Revolution"
+    "Spanish Inquisition"
 
-![](time.png)
+![](ddg.png)
 
