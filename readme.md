@@ -1,12 +1,13 @@
 
-# Dictionary - Chatterbox Skill
+# Wikipedia - Chatterbox Skill
 
-Words meanings
+Search Wikipedia
 
 Examples
 
-    "meaning of dog"
-    "what is the meaning of computer
+    "Tell me about elon musk"
+    "Search wikipedia for dogs
 
-![](dictionary.png)
+![](wiki.png)
+![](wiki2.png)
 
