@@ -1,18 +1,18 @@
 <xml xmlns="https://developers.google.com/blockly/xml">
   <variables>
-    <variable id="Ki3.mGXP%)u6QQCTg4o5">answer</variable>
-    <variable id="G1)n2P%$Mx6(RbqEPx@k">answered</variable>
     <variable id="bTM4L2$^0}|ja{AUS~9b">query</variable>
+    <variable id="Ki3.mGXP%)u6QQCTg4o5">answer</variable>
     <variable id="EzUnK@8=M0/9^mrXSS#D">last_spoken</variable>
+    <variable id="G1)n2P%$Mx6(RbqEPx@k">answered</variable>
     <variable id="V$^t%-*n*lkZAk~EREmn">long_answer</variable>
     <variable id="8THeXH,%egBdu=`4L3X!">lines</variable>
     <variable id="T+DzDLR=U!`;TX8d:Mp$">response</variable>
     <variable id="If:zuLxg3dsY$R3amVRa">utterance</variable>
   </variables>
-  <block type="on_phrase_examples" id="hRQHDyZf}W?EO/f5~%96" x="113" y="74">
+  <block type="on_phrase_examples" id="hRQHDyZf}W?EO/f5~%96" x="106" y="-185">
     <mutation xmlns="http://www.w3.org/1999/xhtml" items="4"></mutation>
     <value name="PVALUE1">
-      <shadow type="multi_text" id="_Hn,;,pUJixkWEC(4#T|">
+      <shadow type="multi_text" id=".b+sfJub|YtF7=Ep;ANJ">
         <field name="NAME"/>
       </shadow>
       <block type="multi_text" id="(7hE*1bSPk,#A}@r?Z?W">
@@ -25,7 +25,7 @@
       </block>
     </value>
     <value name="PVALUE2">
-      <shadow type="multi_text" id="hP:P7gf$K%k.ruDiWbCn">
+      <shadow type="multi_text" id="ED:gs,Dp(XQrien7h-vW">
         <field name="NAME"/>
       </shadow>
       <block type="multi_text" id="oFLblGp]DOLU/NC:dr-M">
@@ -38,7 +38,7 @@
       </block>
     </value>
     <value name="PVALUE3">
-      <shadow type="multi_text" id="zd=7pn|!U#q1Ts/8)|HA">
+      <shadow type="multi_text" id="_]+PyB30l`oT[rh/d}mL">
         <field name="NAME"/>
       </shadow>
       <block type="multi_text" id="yI.zg/c`XN~X`_PRU7$v">
@@ -51,7 +51,7 @@
       </block>
     </value>
     <value name="PVALUE4">
-      <shadow type="multi_text" id="[kBxTnjv1h(R^e6x.~vs">
+      <shadow type="multi_text" id="$OK+Tv$MBQoay0@B-:~_">
         <field name="NAME"/>
       </shadow>
       <block type="multi_text" id="?f|RBW2kFR}dc6aQ}w-M">
@@ -64,74 +64,52 @@
       </block>
     </value>
     <statement name="CODE">
-      <block type="variables_set" id="~_CM?e{G]/KOKdr2Fpfs">
+      <block type="variables_set" id="C`ta|eBX!xMY@WEGpT%G">
         <field name="VAR" id="Ki3.mGXP%)u6QQCTg4o5">answer</field>
         <value name="VALUE">
-          <block type="short_wikipedia_summary" id="tP@Q9+eB.idT/l`tPyH[">
-            <value name="NAME">
-              <shadow type="text" id="LEx:3,JZl:+Er.TS{QjE">
-                <field name="TEXT"/>
-              </shadow>
-              <block type="variables_get" id="_!SJ%z`__^ONPqu`e/Vb">
+          <block type="procedures_callreturn" id="MTb/u!#mNCUOao:8uJr]">
+            <mutation name="search_wikipedia">
+              <arg name="query"/>
+            </mutation>
+            <value name="ARG0">
+              <block type="variables_get" id=",mjRQI_Lqb7^gyr06RA9">
                 <field name="VAR" id="bTM4L2$^0}|ja{AUS~9b">query</field>
               </block>
             </value>
           </block>
         </value>
         <next>
-          <block type="speak" id="7VcGWWjv)`5Qxk%s5oG]">
-            <value name="MESSAGE">
-              <shadow type="text" id="%A#f7M3F|;Xa6,3S7{#[">
-                <field name="TEXT"/>
-              </shadow>
-              <block type="variables_get" id="LJZJ1V{9|pz/o2v,/O3[">
+          <block type="controls_if_try" id="pAq34E-z4K{ua22|9,m#">
+            <mutation xmlns="http://www.w3.org/1999/xhtml" else="1"></mutation>
+            <value name="IF0">
+              <block type="variables_get" id="N9_^UQsWlY.?d6VgyT,G">
                 <field name="VAR" id="Ki3.mGXP%)u6QQCTg4o5">answer</field>
               </block>
             </value>
-            <next>
-              <block type="variables_set" id="74qCr_|U}0klMohgE_@7">
-                <field name="VAR" id="V$^t%-*n*lkZAk~EREmn">long_answer</field>
-                <value name="VALUE">
-                  <block type="wikipedia_summary" id="cSZEAse+TNDe;]B-P.mu">
-                    <value name="NAME">
-                      <shadow type="text" id="%kwp@.*wH?MfI5;ugoP2">
-                        <field name="TEXT"/>
-                      </shadow>
-                      <block type="variables_get" id="fj5JEK=T:J)-|ajvG%2T">
-                        <field name="VAR" id="bTM4L2$^0}|ja{AUS~9b">query</field>
-                      </block>
-                    </value>
+            <statement name="DO0">
+              <block type="speak" id="7VcGWWjv)`5Qxk%s5oG]">
+                <value name="MESSAGE">
+                  <shadow type="text" id="%A#f7M3F|;Xa6,3S7{#[">
+                    <field name="TEXT"/>
+                  </shadow>
+                  <block type="variables_get" id="LJZJ1V{9|pz/o2v,/O3[">
+                    <field name="VAR" id="Ki3.mGXP%)u6QQCTg4o5">answer</field>
                   </block>
                 </value>
-                <next>
-                  <block type="variables_set" id="*nQ7bKd|@zX-g1}A@wf[">
-                    <field name="VAR" id="8THeXH,%egBdu=`4L3X!">lines</field>
-                    <value name="VALUE">
-                      <block type="split_lines" id="Gmz{@5Pdh1Kj`]8k=m;i">
-                        <value name="in">
-                          <shadow type="text" id="Ch+Dt3|KU{~Z6H7%To0y">
-                            <field name="TEXT"/>
-                          </shadow>
-                          <block type="variables_get" id=":P_dQ|Br}Y/}LMDf*}$.">
-                            <field name="VAR" id="V$^t%-*n*lkZAk~EREmn">long_answer</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="variables_set" id="h+F]$$`V2any#EqHto$%">
-                        <field name="VAR" id="EzUnK@8=M0/9^mrXSS#D">last_spoken</field>
-                        <value name="VALUE">
-                          <block type="math_number" id="SGjS@i(%)d,f$d}Ns{n8">
-                            <field name="NUM">1</field>
-                          </block>
-                        </value>
-                      </block>
-                    </next>
-                  </block>
-                </next>
               </block>
-            </next>
+            </statement>
+            <statement name="ELSE">
+              <block type="speak" id="qq$4k9=VGoI4GVej[*.y">
+                <value name="MESSAGE">
+                  <shadow type="text">
+                    <field name="TEXT"/>
+                  </shadow>
+                  <block type="text" id="iFgS}{w@f5UH`ATwxxSe">
+                    <field name="TEXT">I could not find anything in wikipedia</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
           </block>
         </next>
       </block>
@@ -148,102 +126,87 @@
           </block>
         </value>
         <statement name="CODE">
-          <block type="variables_set" id="J2r:,g_Ezs.|EK;3-tnT">
-            <field name="VAR" id="EzUnK@8=M0/9^mrXSS#D">last_spoken</field>
-            <value name="VALUE">
-              <block type="math_arithmetic" id="pZaL#mrQ=U0PJHqo9tas">
-                <field name="OP">ADD</field>
-                <value name="A">
-                  <shadow type="math_number" id="Z2P;p3XJ5oO|t{X[H`hr">
-                    <field name="NUM">1</field>
-                  </shadow>
-                  <block type="variables_get" id="$$7~5N]eOOx^A%d40NW]">
-                    <field name="VAR" id="EzUnK@8=M0/9^mrXSS#D">last_spoken</field>
-                  </block>
-                </value>
-                <value name="B">
-                  <shadow type="math_number" id="#B$%.@.HQ`9n^b6o~E}0">
-                    <field name="NUM">1</field>
-                  </shadow>
-                </value>
-              </block>
-            </value>
-            <next>
-              <block type="controls_if_try" id="IX{z9/Rvq1;yT)gEPVo~">
-                <mutation xmlns="http://www.w3.org/1999/xhtml" else="1"></mutation>
-                <value name="IF0">
-                  <block type="logic_compare" id="@Wtb!l3^JJ{t1I,kHrW/">
-                    <field name="OP">LT</field>
-                    <value name="A">
-                      <block type="variables_get" id="oO.e^WD?g(rbFC}Ry.7q">
-                        <field name="VAR" id="EzUnK@8=M0/9^mrXSS#D">last_spoken</field>
-                      </block>
-                    </value>
-                    <value name="B">
-                      <block type="lists_length" id="NdQGapEjznqNBx:6pGwV">
-                        <value name="VALUE">
-                          <block type="variables_get" id="/5P6@7cj?ObM25+e:9LF">
-                            <field name="VAR" id="8THeXH,%egBdu=`4L3X!">lines</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <statement name="DO0">
-                  <block type="variables_set" id="u.:]9C46_a_WpZvE9S5S">
-                    <field name="VAR" id="T+DzDLR=U!`;TX8d:Mp$">response</field>
-                    <value name="VALUE">
-                      <block type="lists_getIndex" id="+_2aBKX,J1L|`r3Mq:Yh">
-                        <mutation statement="false" at="true"/>
-                        <field name="MODE">GET</field>
-                        <field name="WHERE">FROM_START</field>
-                        <value name="VALUE">
-                          <block type="variables_get" id="mBvlDN7:/~mH?U1K/pkv">
-                            <field name="VAR" id="8THeXH,%egBdu=`4L3X!">lines</field>
-                          </block>
-                        </value>
-                        <value name="AT">
-                          <block type="variables_get" id="EV(jT3T?OqB3S/LWZ$0t">
-                            <field name="VAR" id="EzUnK@8=M0/9^mrXSS#D">last_spoken</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="speak" id="5|m37bNN/yL:/Le47MSY">
-                        <value name="MESSAGE">
-                          <shadow type="text" id="KvOr5:e+XPfqfxlCxy?_">
-                            <field name="TEXT"/>
-                          </shadow>
-                          <block type="variables_get" id="rC[-!LvP!QIF2IK%rz!,">
-                            <field name="VAR" id="T+DzDLR=U!`;TX8d:Mp$">response</field>
-                          </block>
-                        </value>
-                      </block>
-                    </next>
-                  </block>
-                </statement>
-                <statement name="ELSE">
-                  <block type="speak" id="O5zNeP(9M6.:mG}m(v`O">
-                    <value name="MESSAGE">
-                      <shadow type="text" id="w`#pUC~KRAj|u_cC^bSS">
-                        <field name="TEXT"/>
-                      </shadow>
-                      <block type="text" id="21NmvlU7(*dhP=X+g8{E">
-                        <field name="TEXT">I don't know more</field>
-                      </block>
-                    </value>
-                  </block>
-                </statement>
-              </block>
-            </next>
+          <block type="procedures_callnoreturn" id="WO=-v?dQJ~0pvn(`qH.#">
+            <mutation name="tell_me_more"/>
           </block>
         </statement>
       </block>
     </next>
   </block>
-  <block type="fallback_handler" id="6#0-MQpf0b*-9*B[3;cQ" x="116" y="664">
+  <block type="procedures_defreturn" id="%?|9k5a_W0=9Jnp70eqn" x="681" y="-104">
+    <mutation>
+      <arg name="query" varid="bTM4L2$^0}|ja{AUS~9b"/>
+    </mutation>
+    <field name="NAME">search_wikipedia</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="~_CM?e{G]/KOKdr2Fpfs">
+        <field name="VAR" id="Ki3.mGXP%)u6QQCTg4o5">answer</field>
+        <value name="VALUE">
+          <block type="short_wikipedia_summary" id="tP@Q9+eB.idT/l`tPyH[">
+            <value name="NAME">
+              <shadow type="text" id="LEx:3,JZl:+Er.TS{QjE">
+                <field name="TEXT"/>
+              </shadow>
+              <block type="variables_get" id="_!SJ%z`__^ONPqu`e/Vb">
+                <field name="VAR" id="bTM4L2$^0}|ja{AUS~9b">query</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="74qCr_|U}0klMohgE_@7">
+            <field name="VAR" id="V$^t%-*n*lkZAk~EREmn">long_answer</field>
+            <value name="VALUE">
+              <block type="wikipedia_summary" id="cSZEAse+TNDe;]B-P.mu">
+                <value name="NAME">
+                  <shadow type="text" id="%kwp@.*wH?MfI5;ugoP2">
+                    <field name="TEXT"/>
+                  </shadow>
+                  <block type="variables_get" id="fj5JEK=T:J)-|ajvG%2T">
+                    <field name="VAR" id="bTM4L2$^0}|ja{AUS~9b">query</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="*nQ7bKd|@zX-g1}A@wf[">
+                <field name="VAR" id="8THeXH,%egBdu=`4L3X!">lines</field>
+                <value name="VALUE">
+                  <block type="split_lines" id="Gmz{@5Pdh1Kj`]8k=m;i">
+                    <value name="in">
+                      <shadow type="text" id="Ch+Dt3|KU{~Z6H7%To0y">
+                        <field name="TEXT"/>
+                      </shadow>
+                      <block type="variables_get" id=":P_dQ|Br}Y/}LMDf*}$.">
+                        <field name="VAR" id="V$^t%-*n*lkZAk~EREmn">long_answer</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="h+F]$$`V2any#EqHto$%">
+                    <field name="VAR" id="EzUnK@8=M0/9^mrXSS#D">last_spoken</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="SGjS@i(%)d,f$d}Ns{n8">
+                        <field name="NUM">1</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="variables_get" id="q!Y;(q|}wj961+2L#FD^">
+        <field name="VAR" id="Ki3.mGXP%)u6QQCTg4o5">answer</field>
+      </block>
+    </value>
+  </block>
+  <block type="fallback_handler" id="6#0-MQpf0b*-9*B[3;cQ" x="105" y="213">
     <statement name="skillCode">
       <block type="variables_set" id="RkZ*Rt,kDy{Tgi-SB=:F">
         <field name="VAR" id="G1)n2P%$Mx6(RbqEPx@k">answered</field>
@@ -253,15 +216,15 @@
           </block>
         </value>
         <next>
-          <block type="variables_set" id=",u@?crUr5|Tn,!*Iy3M3">
+          <block type="variables_set" id="YRpPF;1m$}/2U?7l2kbl">
             <field name="VAR" id="Ki3.mGXP%)u6QQCTg4o5">answer</field>
             <value name="VALUE">
-              <block type="short_wikipedia_summary" id="y@F$XD*t{*#gbr;1|?u%">
-                <value name="NAME">
-                  <shadow type="text">
-                    <field name="TEXT"/>
-                  </shadow>
-                  <block type="variables_get" id="y3]8{xu-+mG6Qzj3o~j4">
+              <block type="procedures_callreturn" id="3{76?;+Xd/WD|B.f0c5c">
+                <mutation name="search_wikipedia">
+                  <arg name="query"/>
+                </mutation>
+                <value name="ARG0">
+                  <block type="variables_get" id="xRAi`fR[U^RHFQ.axw;f">
                     <field name="VAR" id="If:zuLxg3dsY$R3amVRa">utterance</field>
                   </block>
                 </value>
@@ -318,5 +281,120 @@
         <field name="VAR" id="G1)n2P%$Mx6(RbqEPx@k">answered</field>
       </block>
     </value>
+    <next>
+      <block type="listen_for_keyphrase" id="Zx1|;6r}4I6fF?GN?w(|">
+        <field name="start listening">FALSE</field>
+        <value name="VALUE">
+          <shadow type="text">
+            <field name="TEXT"/>
+          </shadow>
+          <block type="text" id="nO8!+5SKNd$Rp_3vQW`c">
+            <field name="TEXT">tell me more</field>
+          </block>
+        </value>
+        <statement name="CODE">
+          <block type="procedures_callnoreturn" id="E?[z3CbB^vG]Oqznrme|">
+            <mutation name="tell_me_more"/>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+  <block type="procedures_defnoreturn" id="pa*~jzCjvJ1-;-m2*[B," x="624" y="257">
+    <field name="NAME">tell_me_more</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="Ag07Kj!.Wem4]5D5vh*.">
+        <field name="VAR" id="EzUnK@8=M0/9^mrXSS#D">last_spoken</field>
+        <value name="VALUE">
+          <block type="math_arithmetic" id="+=E7]Nz{trcWJNwRilp$">
+            <field name="OP">ADD</field>
+            <value name="A">
+              <shadow type="math_number">
+                <field name="NUM">1</field>
+              </shadow>
+              <block type="variables_get" id="g]Da;Zf/ZZR5K:X?V[D$">
+                <field name="VAR" id="EzUnK@8=M0/9^mrXSS#D">last_spoken</field>
+              </block>
+            </value>
+            <value name="B">
+              <shadow type="math_number" id="Rtz-K+7.s}g9js..)Bm(">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_if_try" id="u$#cyCCVE,01dey?Jzn@">
+            <mutation xmlns="http://www.w3.org/1999/xhtml" else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="30$OJ6BUBK|S0n_J+iFo">
+                <field name="OP">LT</field>
+                <value name="A">
+                  <block type="variables_get" id="i1]Vigc8w(MF|fA.}/Q;">
+                    <field name="VAR" id="EzUnK@8=M0/9^mrXSS#D">last_spoken</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="lists_length" id="#C)MBfPG|lL)!C*vL:_L">
+                    <value name="VALUE">
+                      <block type="variables_get" id=".ppxb:8fybSAH4YqnD%7">
+                        <field name="VAR" id="8THeXH,%egBdu=`4L3X!">lines</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="variables_set" id="kzHF[wO}z-rH9,Uz!6:c">
+                <field name="VAR" id="T+DzDLR=U!`;TX8d:Mp$">response</field>
+                <value name="VALUE">
+                  <block type="lists_getIndex" id=",yAm0m(Jy1TU2lxi)$O5">
+                    <mutation statement="false" at="true"/>
+                    <field name="MODE">GET</field>
+                    <field name="WHERE">FROM_START</field>
+                    <value name="VALUE">
+                      <block type="variables_get" id="%EF/`(*~1-mNnQnsg=W~">
+                        <field name="VAR" id="8THeXH,%egBdu=`4L3X!">lines</field>
+                      </block>
+                    </value>
+                    <value name="AT">
+                      <block type="variables_get" id="3h,{obEI.OwYf6=#5E*W">
+                        <field name="VAR" id="EzUnK@8=M0/9^mrXSS#D">last_spoken</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="speak" id="esYA7p9x2qRE(KbdsJ6v">
+                    <value name="MESSAGE">
+                      <shadow type="text">
+                        <field name="TEXT"/>
+                      </shadow>
+                      <block type="variables_get" id="xTJR,3x_Cvn!Cf#hs.O@">
+                        <field name="VAR" id="T+DzDLR=U!`;TX8d:Mp$">response</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="speak" id="L5r}%8vR;$3M%QttNTke">
+                <value name="MESSAGE">
+                  <shadow type="text">
+                    <field name="TEXT"/>
+                  </shadow>
+                  <block type="text" id="+%[%;a67xv`S!=sBWMvQ">
+                    <field name="TEXT">I don't know more</field>
+                  </block>
+                </value>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
   </block>
 </xml>
